@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadiOjos</title>
+    <style>
+
+        @font-face {
+            font-family: 'Retro Young';
+            src: url('./retroyoung.otf') format('opentype');
+        }
+
+        body{
+            background-color: rgb(40, 40, 40);
+        }
+
+        header {
+            background-color: antiquewhite;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            font-family: 'Retro Young', sans-serif;
+            color: white;
+            font-size: 25px;
+        }
+
+        header img {
+            width: 15%;
+        }
+
+        header p {
+            margin: 0;
+            flex-grow: 0.8;
+            text-align: center;
+        }
+
+
+
+        #chooseZone{
+            font-family: 'Retro Young', sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Cambiamos el valor a 1fr en lugar de auto */
+            gap: 20px;
+            margin: 20px;
+            height:80vh; /*viewport height, 80% del tamaño de la pantalla*/
+        }
+
+        .opt {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 10px;
+            background-position: center;
+            background-size: cover;
+        }
+        
+
+        .opt::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 1;
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .opt:hover::after{
+            opacity: 0.1;
+        }
+
+        #chooseZone h1{
+            color:orange;
+            text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        }
+
+        #chooseZone p{
+            color: white;
+            text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://iesojosdelguadiana.es/wp-content/uploads/2022/03/Cabecera_png.png" alt="Logo del instituto"/>
+        <p>Recreativos Ojos</p>
+    </header>
+
+    <div id="chooseZone">
+        <div class="opt" style="background-image: url('img1.jpg')">
+            <h1>Dedica una canción</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+        </div>
+
+        <div class="opt" style="background-image: url('img2.jpg')">
+            <h1> Participa con nosotros</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+
+        </div>
+        <div class="opt" style="background-image: url('img3.jpg')">
+            <h1> Envía tus sugerencias</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
+        </div>
+    </div>
+</body>
+</html>
