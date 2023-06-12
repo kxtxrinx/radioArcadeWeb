@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Moirai+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
 
 /**
@@ -29,6 +30,8 @@
         * {
             cursor: url(https://cur.cursors-4u.net/games/gam-16/gam1503.cur), 
             auto !important;
+
+            user-select: none;
         }
 
         @font-face {
@@ -231,17 +234,17 @@
 
     <div id="chooseZone">
         <div class="opt" style="background-image: url('img1.jpg')">
-            <h1>Dedica una canción</h1>
+            <h1 id="chooseOptText" class="animate_animated" onmouseover="h1Over()">Dedica una canción</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
         </div>
 
         <div class="opt" style="background-image: url('micro.jpg')">
-            <h1>Participa con nosotros</h1>
+            <h1 id="chooseOptText">Participa con nosotros</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
 
         </div>
         <div class="opt" style="background-image: url('img2.jpg')">
-            <h1>Envía tus sugerencias</h1>
+            <h1 id="chooseOptText">Envía tus sugerencias</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
         </div>
     </div>
@@ -279,16 +282,25 @@
         };
 
         var header = document.getElementById("mainHeader");
+        var h1 = document.getElementById('chooseOptText')
 
         var sticky = header.offsetTop;
 
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function headerScroll() {
-        if (window.pageYOffset > sticky) {
-            header.style.backgroundColor = "rgb(0,0,0,0.4)"
-        } else {
-            header.style.backgroundColor = "rgb(0,0,0,0)"
+            if (window.pageYOffset > sticky) {
+                //TODO header transition
+                //header.style.transition = "opacity 0.3s ease";
+                header.style.backgroundColor = "rgb(0,0,0,0.4)"
+
+                
+            } else {
+                header.style.backgroundColor = "rgb(0,0,0,0)"
+            }
         }
+
+        //TODO
+        function h1Over(){
+            h1.classList.add("animate__pulse")
         }
     </script>
 </body>
