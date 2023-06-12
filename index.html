@@ -21,16 +21,10 @@
         
 
 /**
-        Poner enlaces a formularios
-        Enlaces a las webs de la JCCM y toda la wea
-        Sponsors
-        Centrar cositas
         Animación al hacer hover entre una opción u otra (aumentar tamaño de la letra)
-        Coger un fondo de la web chulo (el gris se queda seco)
-        Cambiar el cursor a algo tipo joystic arcade
-        Pedirle a Paula las imágenes reales del carrousel
         Poner en pequeñito en el footer disclaimers de las imágenes sacadas de Pixabay
-        Hacer el texto de descripción de una opción u otra (hay texto genérico en latín)
+
+
 */
         @import url(//fonts.googleapis.com/css?family=Vibur);
 
@@ -121,6 +115,7 @@
             border-radius: 10px;
             background-position: center;
             background-size: cover;
+            height:100%;
         }
 
         .opt h5 {
@@ -275,20 +270,25 @@
         </header>
 
     <div id="chooseZone">
-        <div class="opt" style="background-image: url('img1.jpg')">
-            <h1 id="chooseOptText" class="animate_animated" onmouseover="h1Over()">Dedica una canción</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
-        </div>
-
-        <div class="opt" style="background-image: url('micro.jpg')">
-            <h1 id="chooseOptText">Participa con nosotros</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-
-        </div>
-        <div class="opt" style="background-image: url('img2.jpg')">
-            <h1 id="chooseOptText">Envía tus sugerencias</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
-        </div>
+        <a href="https://forms.gle/W2XwwAJJfqAzjrwCA" target="_blank">
+            <div class="opt" style="background-image: url('img1.jpg')">
+                <h1>Dedica una canción</h1>
+                <p>¿Quieres dedicar una canción a un amigo, familiar, ser querido o incluso a alguno de tus profesores favoritos? ¡Adelante!</p>
+            </div>
+        </a>
+        <a href="https://forms.gle/6zaZrM6i3M5zQRyf6" target="_blank">
+            <div class="opt" style="background-image: url('micro.jpg')">
+                <h1>Participa con nosotros</h1>
+                <p>¿Has pensado en ser parte de nuestros programas de radio? No lo pienses más y da el paso rellenando nuestro formulario.</p>
+    
+            </div>
+        </a>
+        <a href="https://forms.gle/cApc2mTuxiVJ7tYV8" target="_blank">
+            <div class="opt" style="background-image: url('img2.jpg')">
+                <h1>Envía tus sugerencias</h1>
+                <p>Si tienes alguna sugerencia para nosotros no dudes en contactarnos. Envíanos tus sugerencias para la radio o para el centro y las atenderemos con gusto.</p>
+            </div>
+        </a>
     </div>
 
     <!--Para el carrousel, poner imágenes a partir de "img4"-->
