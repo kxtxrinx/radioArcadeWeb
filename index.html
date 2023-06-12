@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RadiOjos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
 
+/**
+        Poner enlaces a formularios
+        Enlaces a las webs de la JCCM y toda la wea
+        Sponsors
+        Centrar cositas
+        Animación al hacer hover entre una opción u otra (aumentar tamaño de la letra)
+        Coger un fondo de la web chulo (el gris se queda seco)
+        Cambiar el cursor a algo tipo joystic arcade
+        Pedirle a Paula las imágenes reales del carrousel
+        Poner en pequeñito en el footer disclaimers de las imágenes sacadas de Pixabay
+        Hacer el texto de descripción de una opción u otra (hay texto genérico en latín)
+*/
         @import url(//fonts.googleapis.com/css?family=Vibur);
 
 
@@ -17,6 +30,10 @@
 
         body{
             background-color: rgb(40, 40, 40);
+            cursor: url(cursor.png);
+            background-image: url(fondo1.jpg), url(fondo2.jpg);
+            background-position: top,bottom;
+            width: 100%;
         }
 
         header {
@@ -30,7 +47,7 @@
 
         header img {
             width: 20%;
-            margin: 20px;
+            margin-left: 5%;
             border-radius: 10px;
         }
 
@@ -40,7 +57,24 @@
             text-align: center;
         }
 
+        .enlaces{
+            display: block;
+            margin-right: 5%;
+            margin-top: 2%;
+           
+        }
 
+        a{
+            color: white;
+        }
+
+        a:hover{
+            color:#a3a3a3
+        }
+
+        a:link, a:visited, a:active {
+            text-decoration: none;
+        }
 
         #chooseZone{
             font-family: 'Retro Young', sans-serif;
@@ -86,6 +120,10 @@
 
         .opt:hover::after{
             opacity: 0.1;
+        }
+
+        .opt:hover{
+            transform: translate(0,-10px);
         }
 
         #chooseZone h1{
@@ -158,14 +196,25 @@
             }
         }
 
+        #carruselsito{
+            margin:20px;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <img src="icon.png" alt="Logo del instituto"/>
-        <p>que alguien alinee esta pinga</p>
             <div class="logo">
-                <b>R<span>etr</span>o <span>Oj</span>os</b>
+                <b>R<span>ad</span>i<span>Oj</span>os</b>
+            </div>
+            <div class="enlaces">
+                <ul style="list-style: none;">
+                    <li> <a href="https://www.jccm.es">JCCM</a></li>
+                    <li><a href="https://educamosclm.castillalamancha.es">EDUCAMOS CLM</a></li>
+                    <li><a href="https://iesojosdelguadiana.es">WEB OJOS DEL GUADIANA</a></li>
+                </ul>
+               
             </div>
         </header>
 
@@ -176,14 +225,42 @@
         </div>
 
         <div class="opt" style="background-image: url('micro.jpg')">
-            <h1> Participa con nosotros</h1>
+            <h1>Participa con nosotros</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
 
         </div>
         <div class="opt" style="background-image: url('img2.jpg')">
-            <h1> Envía tus sugerencias</h1>
+            <h1>Envía tus sugerencias</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
         </div>
     </div>
+
+    <div id="carruselsito">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://th.bing.com/th/id/R.d99ade05f40dbdf8569a97abc08b7d9c?rik=FJgOPakbSYds1w&riu=http%3a%2f%2fwww.daimiel.es%2fsites%2fdefault%2ffiles%2fstyles%2fmax_width_800px%2fpublic%2f2020-06%2fies_ojos_del_guadiana_2.jpg%3fitok%3dtgg9Ewfh&ehk=PlkHiEzvLeyDAdn8CvUDLidM6UCS4ppiChnyYlAK2X4%3d&risl=&pid=ImgRaw&r=0" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.uclm.es/-/media/Images/Noticias/Febrero20/ALBACETE/IIIolimpiada2.ashx" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.ytimg.com/vi/H9aC5AGY9YU/maxresdefault.jpg" alt="Juan">
+            </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
