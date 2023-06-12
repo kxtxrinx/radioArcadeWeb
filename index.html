@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Moirai+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
 
 /**
@@ -29,6 +30,8 @@
         * {
             cursor: url(https://cur.cursors-4u.net/games/gam-16/gam1503.cur), 
             auto !important;
+
+            user-select: none;
         }
 
         @font-face {
@@ -73,7 +76,7 @@
             margin-right: 5%;
             margin-top: 2%;
             font-family: 'Bagel Fat One', cursive;
-            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0b16af, 0 0 0.5em #8b0707, 0 0 0.1em #43065f, 0 10px 3px #000;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #0b16af, 0 0 0.5em #8b0707, 0 0 0.1em #43065f, 0 3px 3px #000;
         }
 
         a{
@@ -208,7 +211,7 @@
             }
         }
 
-        #carruselsito{
+        #carrouselImg{
             margin:20px;
         }
 
@@ -265,32 +268,36 @@
 
     <div id="chooseZone">
         <div class="opt" style="background-image: url('img1.jpg')">
-            <h1>Dedica una canción</h1>
+            <h1 id="chooseOptText" class="animate_animated" onmouseover="h1Over()">Dedica una canción</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
         </div>
 
         <div class="opt" style="background-image: url('micro.jpg')">
-            <h1>Participa con nosotros</h1>
+            <h1 id="chooseOptText">Participa con nosotros</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
 
         </div>
         <div class="opt" style="background-image: url('img2.jpg')">
-            <h1>Envía tus sugerencias</h1>
+            <h1 id="chooseOptText">Envía tus sugerencias</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </p>
         </div>
     </div>
 
-    <div id="carruselsito">
+    <!--Para el carrousel, poner imágenes a partir de "img4"-->
+    <div id="carrouselImg">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://th.bing.com/th/id/R.d99ade05f40dbdf8569a97abc08b7d9c?rik=FJgOPakbSYds1w&riu=http%3a%2f%2fwww.daimiel.es%2fsites%2fdefault%2ffiles%2fstyles%2fmax_width_800px%2fpublic%2f2020-06%2fies_ojos_del_guadiana_2.jpg%3fitok%3dtgg9Ewfh&ehk=PlkHiEzvLeyDAdn8CvUDLidM6UCS4ppiChnyYlAK2X4%3d&risl=&pid=ImgRaw&r=0" alt="First slide">
+                <img class="d-block w-100" src="./img4.jpg">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://www.uclm.es/-/media/Images/Noticias/Febrero20/ALBACETE/IIIolimpiada2.ashx" alt="Second slide">
+                <img class="d-block w-100" src="./img5.jpg">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.ytimg.com/vi/H9aC5AGY9YU/maxresdefault.jpg" alt="Juan">
+                <img class="d-block w-100" src="./img6.jpg">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./img7.jpg">
             </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -325,16 +332,25 @@
         };
 
         var header = document.getElementById("mainHeader");
+        var h1 = document.getElementById('chooseOptText')
 
         var sticky = header.offsetTop;
 
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function headerScroll() {
-        if (window.pageYOffset > sticky) {
-            header.style.backgroundColor = "rgb(0,0,0,0.4)"
-        } else {
-            header.style.backgroundColor = "rgb(0,0,0,0)"
+            if (window.pageYOffset > sticky) {
+                //TODO header transition
+                //header.style.transition = "opacity 0.3s ease";
+                header.style.backgroundColor = "rgb(0,0,0,0.4)"
+
+                
+            } else {
+                header.style.backgroundColor = "rgb(0,0,0,0)"
+            }
         }
+
+        //TODO
+        function h1Over(){
+            h1.classList.add("animate__pulse")
         }
     </script>
 </body>
