@@ -96,6 +96,9 @@ a:link, a:visited, a:active {
     background-position: center;
     background-size: cover;
     height:100%;
+
+    transition: font-size 0.3s ease-in-out;
+
 }
 
 .opt h5 {
@@ -225,3 +228,10 @@ hr {
 
     justify-content: center;
 }
+
+  .opt:hover h1 {
+    font-size: 2.7em; /* Tamaño de letra aumentado */
+    transition: font-size 0.3s ease-in-out;
+
+  }
+  
