@@ -1,11 +1,3 @@
-  
-
-/**
-        Animación al hacer hover entre una opción u otra (aumentar tamaño de la letra)
-        Poner en pequeñito en el footer disclaimers de las imágenes sacadas de Pixabay
-
-
-*/
 @import url(//fonts.googleapis.com/css?family=Vibur);
 
                 
@@ -139,7 +131,7 @@ a:link, a:visited, a:active {
 
 .logo {
     margin: auto;
-    user-select: none; /*para que no se seleccione que kedafeo*/
+    user-select: none; /*para que no se seleccione el texto*/
 }
 
 .logo b{
@@ -156,6 +148,8 @@ a:link, a:visited, a:active {
 .logo b span:nth-of-type(2){
     animation: blink linear infinite 3s;
 }
+
+/*Animación del texto Radiojos*/
 
 @keyframes blink {
     78% {
@@ -229,8 +223,9 @@ hr {
     justify-content: center;
 }
 
+/* Tamaño de letra aumentado */
   .opt:hover h1 {
-    font-size: 2.7em; /* Tamaño de letra aumentado */
+    font-size: 2.7em; 
     transition: font-size 0.3s ease-in-out;
 
   }
