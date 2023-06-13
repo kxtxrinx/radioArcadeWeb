@@ -18,14 +18,7 @@
 
     
     <style>
-        
 
-/**
-        Animación al hacer hover entre una opción u otra (aumentar tamaño de la letra)
-        Poner en pequeñito en el footer disclaimers de las imágenes sacadas de Pixabay
-
-
-*/
         @import url(//fonts.googleapis.com/css?family=Vibur);
 
                 
@@ -69,7 +62,7 @@
 
         header p {
             margin: 0;
-            flex-grow: 0.8; /*Para centrar el textito*/
+            flex-grow: 0.8; 
             text-align: center;
         }
 
@@ -154,12 +147,6 @@
             text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
         }
 
-        /*
-            Header neón 
-            DISCLAIMER ANTES DE QUE ME ODIE TODO EL MUNDO POR ESTO:
-            Esto no es óptimo en una página real porque habrían PCs que cargarían a pedales pero como es una página local en la Raspberry estamos piola
-            (La fuente se ve bonita con el server, en local no se ve una pinga)
-        */
         .logo {
             margin: auto;
             user-select: none; /*para que no se seleccione que kedafeo*/
@@ -346,19 +333,12 @@
 
         function headerScroll() {
             if (window.pageYOffset > sticky) {
-                //TODO header transition
-                //header.style.transition = "opacity 0.3s ease";
                 header.style.backgroundColor = "rgb(0,0,0,0.4)"
 
                 
             } else {
                 header.style.backgroundColor = "rgb(0,0,0,0)"
             }
-        }
-
-        //TODO
-        function h1Over(){
-            h1.classList.add("animate__pulse")
         }
     </script>
 </body>
